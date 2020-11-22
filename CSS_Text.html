@@ -1,0 +1,122 @@
+<!-- Font / Text
+	pxtoem.com (site) : font size check!
+	
+1. font-weight : normal / lighter / bold ;
+				100~400(default)~900
+				
+2. text-decoration : underline / line-through / overline
+
+3. font-style : normal / italic(oblique)
+
+4. text-algin : left / right / center / justify(균등분할)
+	글씨, 글씨성격(inline tag...)인 것들을 정렬할 때 사용.
+	
+4-1. word-break:break-all; (단어 잘라서 올리기, 반드시 justify와 같이 사용)
+
+5. 글의 간격
+	letter-spacing : 10px (글자 사이의 간격 / 자간)
+		photoshop tracking(ctrl+t) 1000 : 1em
+		120 = 0.12em
+		
+	word-spacing : 10px (단어 사이의 간격)
+	
+	line-height: 40px (단어의 위아래 높이합쳐서.)
+	
+6. text-transform: uppercase / lowercase / capitalize
+   text-variant: small-caps;
+   
+7. 수직정렬 (Vertical Align) 인라인 요소의 높낮이를 할 때만 사용한다.
+	vertical-align: baseline / text-bottom (글자 밑 맞춰서)
+					sub / bottom		(맨 밑)
+					super / text-top 	(글자 위 맞춰서)
+					top	(맨 위)
+					middle (중간)
+					px(20 default)
+	이미지 밑의 공백 없애기 : vartical-align: top; (필수)
+	
+8. white-space: nowrap / pre / pre-wrap / pre-line
+	nowrap이 가장 많이 쓰임(줄넘김 안함)
+	
+9. text-indent:20px;  (들여쓰기)
+	ex)
+		h3 a{
+			background-image:url(img/logo.png);
+			width:90px;
+			height:30px; (이미지 크기)
+			display:block; (인라인요소는 크기설정이 안됨. 그래서 블럭요소로...)
+			text-indent:-9999em;
+			/* image replacement IR */
+		}
+		
+		<h3><a href="#">logo</a><h3>
+		
+		왜 이미지를 안넣고 logo글씨를 넣는가? 검색에 용이하기 위해서!!!!!
+		image replacement (IR)기법이라고 한다!
+
+================================================ -->
+<!doctype html> 
+<html lang="ko">
+	<head>
+	<!--헤더영역(문서제목과 메타정보 포함)-->
+		<meta charset="utf-8"/>
+		<title>Font</title>
+		<meta name="keywords" content="galaxy, s8, 스마트폰, 삼성폰"/>
+		<meta name="disciption" content="카메라 성능이 향상된 galaxy s8"/>
+		<meta name="robot" content="index,follow"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<style type="text/css">
+			.area{
+				width:400px;
+				
+				background-color:silver;
+				margin-bottom:50px;
+				
+			}
+			.nowrap{
+				white-space:nowrap;
+				height:40px;
+			}
+			.pre{
+				white-space:pre;
+			}
+			.pre-wrap{
+				white-space:pre-wrap;
+			}
+			.pre-line{
+				white-space:pre-line;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="area">
+		<h1>글자의 정렬</h1>
+		<h2>line height</h2>
+		
+		<p class="area nowrap">
+			<em>Lorem Ipsum</em> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specime
+		</p>
+		
+		<p class="area pre">
+			<em>Lorem Ipsum</em> is simply dummy t
+			ext of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+			standard dummy text ever since the 1500s, when an unknown printer took a galley of
+			
+		</p>
+		
+		<p class="area pre-wrap">
+			<em>Lorem Ipsum</em> is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
+			en an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+		</p>
+		
+		<p class="area pre-line">
+			<em>Lorem Ipsum</em> is simply dummy text of the printing and typesetting industry. 
+			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scra
+			mbled it to make a type specimen book. 
+		</p>
+		
+
+	</div>
+	</body>
+</html>

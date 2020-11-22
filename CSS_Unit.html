@@ -1,5 +1,16 @@
 <!--
-
+	모니터, 스크린용 : em, ex, px, % 등의 상대값. (px도 상대값이다.)
+	px:줄이면 스크롤 생김.
+	% :줄이면 %만큼만 계속 차지.
+	em : em단위가 쓰여진 곳의 폰트 사이즈 배수.
+	rem : 문서의 기본값으 배수.
+		pxtoem.com (site) : 문서의 기본 값을 볼 수 있다. 보통 기본 16px
+		:root 로 문서의 기본값을 바꿀 수 있다.
+		
+	viewport에 대응해서 크기 변경.
+	vw와 vh는 브라우저 안쪽의 공간 다~ (부모 공간을 넘어간다.)
+	
+	***** %는 부모가 만들어준 공간안에서 너비 비율.
 -->
 <!doctype html>
 <html lang="ko">
@@ -10,9 +21,32 @@
 		<meta name="description" content="설명">
 		<meta name="robot" content="all">
 		<meta name="viewport" content="width=device-width, inital-scale=1">
+		<style>
+			:root{
+				font-size:12px;
+			}
+			h1{
+				font-size:1.5rem;
+			}
+			h2{
+				font-size:1.2rem;
+			}
+			p{
+				font-size:1.5rem;
+				width:100vw;
+				height:50vh;
+				background-color:green;
+			}
+			span{
+				font-size:0.8rem;
+			}
+		</style>
 	</head>
 	<body>
-
-	
+		<h1>css 기본 문법<h1>
+		<h2>길이 단위</h2>
+		<p>
+		<span>Lorem Ipsum</span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
 	</body>
 </html>

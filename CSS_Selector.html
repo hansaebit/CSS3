@@ -1,0 +1,110 @@
+<!-- 선택자
+csslint (site) : css가 잘 쓰여졌는지 확인.
+01. 태그 선택자
+	h1{
+	}
+02. 전체 선택자
+	*{
+	}
+	div *{
+	}
+03. class 선택자 (하나 혹은 여러 요소에게 공통적으로)
+	.class{
+	}
+04. id 선택자 (유일무이한 요소에게), 되도록이면 쓰지 않는 것을 권장한다.
+	#id{
+	}
+05. 자손선택자(하위선택자) : div 밑의 h2 모두 다~
+	div h2{
+	}
+06. 자식선택자 : h2의 자식들만!
+	div > h2{
+	}
+07. 인접형제선택자
+	div h1 + h2{	: 뒤 하나만
+	}
+	div nav ~ h2{	: 뒤에 다~~~
+	}
+08. 그룹화
+	#title, nav ~ h2{
+	}
+09. 속성 선택자(attribue selector)
+	[attribute]{
+	}
+	[attribute="value"]{	: 속성명과 속성값.
+	}
+	[class^="link"]{	: 클래스의 명이 link로 시작하는 것.
+	}
+10. pseudo selector(가상선택자)	: 링크에 많이 쓰임
+	:link{	: 링크 모두 다~
+	}
+	a:hover{	: a태그에 마우스롤 올리면 ~
+	}
+		h1:hover{}
+	a:active{	: a태그를 누르는 순간 ~
+	}
+	a:visited{	: 방문한 곳
+	}
+	a:focus{	: 키보드 커서가 올라가 있는 곳
+	}
+		input:focus{}
+11. 의사요소 선택자
+	h1:before{	: h1태그의 content에 맨 앞에 before글자 입력.
+		content:'befor';
+	}
+	h1:after{	: h1태그의 content에 맨 뒤에 after 입력.
+		content:'after';
+	}
+	ex) h1:before{
+				content:'';
+				display:inline-block;
+				width:15px;
+				height:15px;
+				background-color:red;
+				margin-right:20px;
+		}
+		
+12. 구조선택자
+	li:first-child{	:li 첫째
+	}
+	li:last-child{	:li의 막내
+	}
+	li:nth-child(3){:li의 셋째
+	}
+	li:nth-child(2n){ : 짝수
+	}
+	li:nth-child(2n+1){ : 홀수
+	}
+	li:nth-chile(-n+3){	: 1부터 3까지.
+	}
+	li:nth-child(n+4){	: 4번째부터.
+	}
+	:not(h1){	: h1을 제외한 나머지 모두.
+	}
+-->
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>선택자</title>
+		<style>
+			h1{
+				color:#000;
+			}
+			:not(h1){
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+		
+			<li>리스트 아이템</li>
+			<li>리스트 아이템</li>
+			<li>리스트 아이템</li>
+			<li>리스트 아이템</li>
+			<li>리스트 아이템</li>
+			<li>리스트 아이템</li>
+		</ul>
+	</body>
+</html>
