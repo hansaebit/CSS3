@@ -1,0 +1,127 @@
+<!--
+
+display 속성
+
+1. block
+
+2. inline
+
+3. inline-block
+
+4. none
+ ( visibility 속성의 hidden은 공간을 차지하면서 보이지 않음, )
+
+5. list-item;
+
+6. table
+-------------------------------------------------
+7. flex
+8. grid
+-------------------------------------------------
+
+overflow 속성의
+
+1. hidden : 넘치면 숨김
+
+2. scroll : 스크롤 ( 회원가입 약관 같은 것들.... ) 좌우가 생김.
+
+3. auto : 넘치는 방향쪽으로만 스크롤이 생김. (회원가입, 약관 시 이거 씀)
+
+4. visible : 기본.
+
+================================================ -->
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>인라인 블락</title>
+	<style>
+	h1{
+		background-color:blue;
+		width:300px;
+		display:inline;
+	}
+	span{
+		background-color:blue;
+		width:300px;
+		display:block;
+	}
+	
+	p{
+		text-align:center;
+	}
+	p a{
+		background-color:blue;
+		color:#fff;
+		text-decoration:none;
+		width: 40px;
+		height: 40px;
+		display:inline-block;
+		line-height:40px;
+	}
+	.hidden{
+		display:none;
+	}
+	.hide{
+		visibility:hidden;
+	}
+	
+	.services{
+		display:table;
+		border:1px solid;
+	}
+	.services div{
+		display:table-cell;
+		width:50%;
+	}
+	
+	.overflow{
+		text-align:left;
+		background-color:silver;
+		border:1px solid;
+		height: 20px;
+		overflow:hidden;
+	}
+	
+	
+	</style>
+	
+</head>
+<body>
+
+<h1> headign 1 </h1>
+<span> span tag </span>
+
+<div class="hidden">hidden area</div>
+<h2 class="hide">heading 2</h2>
+
+
+<p>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+</p>
+<div>
+	<i> list</i>
+	<i> list</i>
+	<i> list</i>
+	<i> list</i>
+</div>
+
+<div class="services">
+	<div>mobile</div>
+	<div>web application</div>
+</div>
+
+<p class="overflow">
+	is simply dummy t
+	ext of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+	standard dummy text ever since the 1500s, when an unknown printer took a galley of
+			
+	
+</p>
+
+</body>
+</html>
